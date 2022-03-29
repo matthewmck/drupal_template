@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  drupal:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+      - ./var/www/html/vendor
+    depends_on:
+      - mysql
+    environment:
+      PHP_OPCACHE_VALIDATE_TIMESTAMPS: 1
+    restart: always
+  phpmyadmin:
+    image: phpmyadmin
+    env_file: ./docker/.env
+    ports:
+      - "8181:80"
+    depends_on:
+      - mysql
+    restart: always
+  mysql:
+    image: mysql
+    env_file: ./docker/.env
+    hostname: mysql
+    ports:
+      - "3306:3306"
+    restart: always
