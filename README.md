@@ -1,5 +1,14 @@
 # Getting Started
 
+> **Drupal template with preconfigured Dockerfile**  
+Drupal version: 9.3.9  
+PHP version: 8.1.4
+
+| Site | URL |
+| --- | --- |
+| Drupal | [localhost:8080](http://localhost:8080) |
+| phpmyadmin | [localhost:8181](http://localhost:8181) |
+
 ## Local Config
 ### Step 1:
 Inside `./docker` create a `.env` file based off of `.env.example `. Keep `PMA_HOST` and `PMA_PORT` the same, everything else can be whatever value you choose.
@@ -48,8 +57,3 @@ Execute commands inside container
 ```
 docker exec -it <CONTAINER_NAME> <CMD>
 ```
-## Access Drupal & phpmyadmin
-| Site | URL |
-| --- | --- |
-| Drupal | [localhost:8080](http://localhost:8080) |
-| phpmyadmin | [localhost:8181](http://localhost:8181) |
