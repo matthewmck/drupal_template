@@ -1,6 +1,6 @@
 # Getting Started
 
-> **Drupal template with preconfigured Dockerfile**  
+**Drupal template with preconfigured Dockerfile**  
 Drupal version: 9.3.9  
 PHP version: 8.1.4
 
